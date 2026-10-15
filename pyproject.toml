@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "my-cli-tool"
+version = "0.1.0"
+description = "一个 Python 命令行工具"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "yjzs8285-boop" },
+]
+keywords = ["cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+dependencies = []
+
+[project.scripts]
+my-cli-tool = "my_cli_tool.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yjzs8285-boop/my-cli-tool"
+Repository = "https://github.com/yjzs8285-boop/my-cli-tool"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/my_cli_tool"]
